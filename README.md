@@ -1,4 +1,4 @@
-AML-Project [![DOI](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUlQC5VW_8OfgM1HWs7pBaGEAbq99RYs5QqMDbzFZxpuEXLG0deA)](https://github.com/biostatistic-summer2019/AML-Project/)
+AML-Project [![DOI](https://www.cityofhope.org/image/aml-2.jpg)](https://github.com/biostatistic-summer2019/AML-Project/)
 ---
 
 # Build ensemble models using Acute Myeloid Leukemia data.
