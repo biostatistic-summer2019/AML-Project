@@ -3,7 +3,7 @@ import random
 import math
 import operator
 
-#Testing CODE
+#Testing CODES
 """
 with open('clinical_9A_standard_low_risk_sd3_CSV.csv', 'r') as file:
 	cvs_reader = csv.reader(file, delimiter=',')
