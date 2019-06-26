@@ -26,8 +26,9 @@ ind <- which(p.vec < 0.000000005)
 aml.sub <-aml.dat[, ind]
 dim (aml.sub)
 
+#data <- read.csv("../datasets/heatmaps_in_r.csv", comment.char="#")
 rnames <- data[,1]                            # assign labels in column 1 to "rnames"
-mat_data <- data.matrix(data[,2:ncol(data)])  # transform columns into a matrix
+mat_data <- data.matrix(data[,2:ncol(data)])  # transform column 2-5 into a matrix
 rownames(mat_data) <- rnames                  # assign row names
 
 
@@ -45,11 +46,21 @@ col_breaks = c(seq(-1,0,length=100),  # for red
 
 # creates a 5 x 5 inch image
 png("heatmaps_all_genes_in_r.png",    # create PNG for the heat map        
-    width = 5*300,        # 5 x 300 pixels
-    height = 5*300,
+    width = 15*300,        # 5 x 300 pixels
+    height = 15*300,
     res = 300,            # 300 pixels per inch
     pointsize = 4)        # smaller font size
-
+#heatmap.2(mat_data,
+#  cellnote = mat_data,  # same data set for cell labels
+#  main = "Correlation", # heat map title
+#  notecol="black",      # change font color of cell labels to black
+#  density.info="none",  # turns off density plot inside color legend
+#  trace="none",         # turns off trace lines inside the heat map
+#  margins =c(12,9),     # widens margins around plot
+#  col=my_palette,       # use on color palette defined earlier
+#  breaks=col_breaks,    # enable color transition at specified limits
+#  dendrogram="row",     # only draw a row dendrogram
+#  Colv="NA")            # turn off column clustering
 heatmap(as.matrix(data)
         ,scale = "column"
         ,col = heat.colors(256)
@@ -59,4 +70,5 @@ heatmap(as.matrix(data)
         ,Colv = NA)
 
 dev.off()               # close the PNG device
+
 
