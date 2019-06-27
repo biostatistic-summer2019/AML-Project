@@ -2,8 +2,12 @@ import csv
 import random
 import math
 import operator
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-#Testing CODE
+
+
+#Testing CODES More Testing
 """
 with open('clinical_9A_standard_low_risk_sd3_CSV.csv', 'r') as file:
 	cvs_reader = csv.reader(file, delimiter=',')
@@ -91,7 +95,7 @@ def main():
 	# Preparing the data
 	trainingSet = []
 	testSet = []
-	split = 0.67 # 67% training 33% test
+	split = 0.80 # 67% training 33% test
 
 	loadDataset('clinical_9A_standard_low_risk_sd3_CSV.csv', split, trainingSet, testSet)
 	"""
@@ -115,9 +119,9 @@ def main():
 	return accuracy
 
 accuracyAverage = 0
-for i in range(500):
+for i in range(100):
 	accuracyAverage += main()
 
-print("Accuracy Average from 500 runs is: " + repr(accuracyAverage / 500))
+print("Accuracy Average from 100 runs is: " + repr(accuracyAverage / 100))
 
 
